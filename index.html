@@ -1,0 +1,3893 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Story ❤️</title>
+
+    <link rel="preconnect" href=https://fonts.googleapis.com>
+
+    <link rel="preconnect" href=https://fonts.gstatic.com crossorigin>
+
+    <link
+        href=https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap
+        rel="stylesheet">
+
+    <style>
+        /* ===== CSS VARIABLES ===== */
+
+        :root {
+
+            --primary-rose: #FFE4E6;
+
+            --secondary-rose: #FFC1CC;
+
+            --deep-rose: #FF6B9D;
+
+            --accent-red: #FF1744;
+
+            --soft-pink: #FFE5EC;
+
+            --warm-white: #FFF8F9;
+
+            --text-dark: #4A1C2E;
+
+            --text-medium: #8B4D69;
+
+            --gold-accent: #D4AF37;
+
+            --gradient-romantic: linear-gradient(135deg, #FFE4E6 0%, #FFC1CC 50%, #FFB6C1 100%);
+
+            --gradient-warm: linear-gradient(180deg, #FFF8F9 0%, #FFE5EC 100%);
+
+            --gradient-overlay: linear-gradient(to bottom, rgba(255, 228, 230, 0.9), rgba(255, 193, 204, 0.8));
+
+            --spacing-xs: 0.5rem;
+
+            --spacing-sm: 1rem;
+
+            --spacing-md: 2rem;
+
+            --spacing-lg: 3rem;
+
+            --spacing-xl: 5rem;
+
+            --font-display: 'Playfair Display', serif;
+
+            --font-body: 'Crimson Text', serif;
+
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+            --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        }
+
+
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+            overflow-x: hidden;
+
+        }
+
+
+
+        body {
+
+            font-family: var(--font-body);
+
+            background: var(--gradient-warm);
+
+            color: var(--text-dark);
+
+            line-height: 1.7;
+
+            overflow-x: hidden;
+
+            position: relative;
+
+            min-height: 100vh;
+
+        }
+
+
+
+        .floating-hearts {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            pointer-events: none;
+
+            z-index: 1;
+
+            overflow: hidden;
+
+        }
+
+
+
+        .floating-hearts::before,
+
+        .floating-hearts::after {
+
+            content: '❤️';
+
+            position: absolute;
+
+            font-size: 1.5rem;
+
+            opacity: 0;
+
+            animation: floatHeart 15s infinite;
+
+        }
+
+
+
+        .floating-hearts::before {
+
+            left: 20%;
+
+            animation-delay: 0s;
+
+        }
+
+
+
+        .floating-hearts::after {
+
+            content: '💕';
+
+            left: 70%;
+
+            animation-delay: 7s;
+
+        }
+
+
+
+        @keyframes floatHeart {
+
+            0% {
+
+                bottom: -10%;
+
+                opacity: 0;
+
+                transform: translateX(0) rotate(0deg);
+
+            }
+
+            10% {
+
+                opacity: 0.6;
+
+            }
+
+            90% {
+
+                opacity: 0.6;
+
+            }
+
+            100% {
+
+                bottom: 110%;
+
+                opacity: 0;
+
+                transform: translateX(100px) rotate(360deg);
+
+            }
+
+        }
+
+
+
+        .music-toggle {
+
+            position: fixed;
+
+            top: 20px;
+
+            right: 20px;
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            background: var(--gradient-romantic);
+
+            border: 2px solid var(--deep-rose);
+
+            cursor: pointer;
+
+            z-index: 1000;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: var(--transition-smooth);
+
+            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+
+        }
+
+
+
+        .music-toggle:hover {
+
+            transform: scale(1.1);
+
+            box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
+
+        }
+
+
+
+        .music-toggle .icon-sound {
+
+            width: 24px;
+
+            height: 24px;
+
+            color: var(--deep-rose);
+
+        }
+
+
+
+        .music-toggle.playing {
+
+            animation: pulse 2s infinite;
+
+        }
+
+
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+        }
+
+
+
+        .nav-bar {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            padding: 1rem 2rem;
+
+            background: rgba(255, 248, 249, 0.95);
+
+            backdrop-filter: blur(10px);
+
+            z-index: 900;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            box-shadow: 0 2px 20px rgba(255, 107, 157, 0.1);
+
+        }
+
+
+
+        .nav-logo {
+
+            font-size: 2rem;
+
+            animation: heartbeat 1.5s infinite;
+
+        }
+
+
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            10%,
+            30% {
+                transform: scale(1.1);
+            }
+
+            20%,
+            40% {
+                transform: scale(1);
+            }
+
+        }
+
+
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 1.5rem;
+
+            flex-wrap: wrap;
+
+        }
+
+
+
+        .nav-link {
+
+            color: var(--text-medium);
+
+            text-decoration: none;
+
+            font-family: var(--font-display);
+
+            font-size: 0.95rem;
+
+            font-weight: 600;
+
+            padding: 0.5rem 1rem;
+
+            border-radius: 20px;
+
+            transition: var(--transition-smooth);
+
+            position: relative;
+
+        }
+
+
+
+        .nav-link::after {
+
+            content: '';
+
+            position: absolute;
+
+            bottom: 0;
+
+            left: 50%;
+
+            width: 0;
+
+            height: 2px;
+
+            background: var(--deep-rose);
+
+            transform: translateX(-50%);
+
+            transition: var(--transition-smooth);
+
+        }
+
+
+
+        .nav-link:hover::after,
+
+        .nav-link.active::after {
+
+            width: 80%;
+
+        }
+
+
+
+        .nav-link.active {
+
+            color: var(--deep-rose);
+
+        }
+
+
+
+        .page {
+
+            min-height: 100vh;
+
+            padding: 6rem 2rem 3rem;
+
+            display: none;
+
+            opacity: 0;
+
+            transform: translateY(20px);
+
+            transition: opacity 0.6s ease, transform 0.6s ease;
+
+        }
+
+
+
+        .page.active {
+
+            display: block;
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+
+        .page-container {
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        .page-title {
+
+            font-family: var(--font-display);
+
+            font-size: clamp(2.5rem, 5vw, 4rem);
+
+            color: var(--deep-rose);
+
+            text-align: center;
+
+            margin-bottom: 1rem;
+
+            font-weight: 700;
+
+            animation: fadeInUp 0.8s ease;
+
+        }
+
+
+
+        .page-subtitle {
+
+            font-family: var(--font-display);
+
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+
+            color: var(--text-medium);
+
+            text-align: center;
+
+            margin-bottom: 3rem;
+
+            font-style: italic;
+
+            animation: fadeInUp 0.8s ease 0.2s both;
+
+        }
+
+
+
+        @keyframes fadeInUp {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(30px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+
+        .hero-section {
+
+            position: relative;
+
+            margin-bottom: 2rem;
+
+        }
+
+
+
+        .landscape-image-container {
+
+            width: 100%;
+
+            margin: 2rem 0;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow: 0 10px 40px rgba(255, 107, 157, 0.2);
+
+        }
+
+
+
+        .landscape-image-container.secondary {
+
+            margin-top: 3rem;
+
+        }
+
+
+
+        .image-slot {
+
+            position: relative;
+
+            background: var(--soft-pink);
+
+            min-height: 300px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+
+        .image-slot.landscape {
+
+            aspect-ratio: 16/9;
+
+            min-height: 400px;
+
+        }
+
+
+
+        .image-placeholder {
+
+            text-align: center;
+
+            padding: 2rem;
+
+            color: var(--text-medium);
+
+        }
+
+
+
+        .placeholder-icon {
+
+            font-size: 3rem;
+
+            margin-bottom: 1rem;
+
+            opacity: 0.6;
+
+        }
+
+
+
+        .upload-btn {
+
+            margin-top: 1rem;
+
+            padding: 0.75rem 2rem;
+
+            background: var(--gradient-romantic);
+
+            color: var(--text-dark);
+
+            border: none;
+
+            border-radius: 30px;
+
+            font-family: var(--font-display);
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: var(--transition-smooth);
+
+            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.2);
+
+        }
+
+
+
+        .upload-btn:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 6px 20px rgba(255, 107, 157, 0.3);
+
+        }
+
+
+
+        .image-preview {
+
+            position: relative;
+
+            width: 100%;
+
+            height: 100%;
+
+        }
+
+
+
+        .image-preview img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: center;
+
+        }
+
+
+
+        .image-controls {
+
+            position: absolute;
+
+            top: 10px;
+
+            right: 10px;
+
+            display: flex;
+
+            gap: 0.5rem;
+
+            opacity: 0;
+
+            transition: var(--transition-smooth);
+
+        }
+
+
+
+        .image-preview:hover .image-controls {
+
+            opacity: 1;
+
+        }
+
+
+
+        .control-btn {
+
+            width: 40px;
+
+            height: 40px;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.95);
+
+            border: 2px solid var(--deep-rose);
+
+            cursor: pointer;
+
+            font-size: 1.2rem;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: var(--transition-smooth);
+
+        }
+
+
+
+        .control-btn:hover {
+
+            background: var(--deep-rose);
+
+            transform: scale(1.1);
+
+        }
+
+
+
+        .hero-text-section {
+
+            text-align: center;
+
+            padding: 3rem 2rem;
+
+            margin: 2rem 0;
+
+        }
+
+
+
+        .hero-title {
+
+            font-family: var(--font-display);
+
+            font-size: clamp(3rem, 7vw, 5rem);
+
+            font-weight: 700;
+
+            margin-bottom: 1rem;
+
+            color: var(--deep-rose);
+
+        }
+
+
+
+        .hero-subtitle {
+
+            font-size: clamp(1.2rem, 3vw, 2rem);
+
+            font-style: italic;
+
+            color: var(--text-medium);
+
+        }
+
+
+
+        .hero-divider {
+
+            width: 100px;
+
+            height: 3px;
+
+            background: var(--deep-rose);
+
+            margin: 2rem auto;
+
+            border-radius: 2px;
+
+        }
+
+
+
+        .animate-in {
+
+            animation: fadeInUp 1s ease both;
+
+        }
+
+
+
+        .animate-in.delay-1 {
+
+            animation-delay: 0.3s;
+
+        }
+
+
+
+        .animate-in.delay-2 {
+
+            animation-delay: 0.6s;
+
+        }
+
+
+
+        .welcome-section {
+
+            background: rgba(255, 255, 255, 0.8);
+
+            padding: 3rem;
+
+            border-radius: 20px;
+
+            margin-top: 3rem;
+
+            box-shadow: 0 10px 40px rgba(255, 107, 157, 0.1);
+
+        }
+
+
+
+        .section-title {
+
+            font-family: var(--font-display);
+
+            font-size: clamp(2rem, 4vw, 3rem);
+
+            color: var(--deep-rose);
+
+            text-align: center;
+
+            margin-bottom: 1.5rem;
+
+        }
+
+
+
+        .section-text {
+
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+
+            color: var(--text-dark);
+
+            text-align: center;
+
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            line-height: 1.8;
+
+        }
+
+
+
+        .timeline {
+
+            position: relative;
+
+            padding: 2rem 0;
+
+        }
+
+
+
+        .timeline::before {
+
+            content: '';
+
+            position: absolute;
+
+            left: 50%;
+
+            top: 0;
+
+            bottom: 0;
+
+            width: 2px;
+
+            background: var(--gradient-romantic);
+
+            transform: translateX(-50%);
+
+        }
+
+
+
+        .timeline-item {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 3rem;
+
+            margin-bottom: 4rem;
+
+            align-items: center;
+
+        }
+
+
+
+        .timeline-item.reverse {
+
+            direction: rtl;
+
+        }
+
+
+
+        .timeline-item.reverse>* {
+
+            direction: ltr;
+
+        }
+
+
+
+        .timeline-content {
+
+            padding: 2rem;
+
+            background: rgba(255, 255, 255, 0.9);
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 20px rgba(255, 107, 157, 0.15);
+
+        }
+
+
+
+        .timeline-content h3 {
+
+            font-family: var(--font-display);
+
+            font-size: 1.8rem;
+
+            color: var(--deep-rose);
+
+            margin-bottom: 1rem;
+
+        }
+
+
+
+        .timeline-content p {
+
+            font-size: 1.2rem;
+
+            color: var(--text-dark);
+
+            line-height: 1.7;
+
+        }
+
+
+
+        .portrait-image-container {
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.2);
+
+        }
+
+
+
+        .image-slot.portrait {
+
+            aspect-ratio: 3/4;
+
+            min-height: 400px;
+
+        }
+
+
+
+        .friendship-gallery {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 2.5rem;
+
+            padding: 2rem 0;
+
+        }
+
+
+
+        .gallery-card {
+
+            background: rgba(255, 255, 255, 0.9);
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow: 0 8px 30px rgba(255, 107, 157, 0.15);
+
+            transition: var(--transition-smooth);
+
+            cursor: pointer;
+
+        }
+
+
+
+        .gallery-card:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.25);
+
+        }
+
+
+
+        .card-caption {
+
+            padding: 1.5rem;
+
+            text-align: center;
+
+        }
+
+
+
+        .card-caption h3 {
+
+            font-family: var(--font-display);
+
+            font-size: 1.5rem;
+
+            color: var(--deep-rose);
+
+            margin-bottom: 0.5rem;
+
+        }
+
+
+
+        .card-caption p {
+
+            font-size: 1.1rem;
+
+            color: var(--text-medium);
+
+            font-style: italic;
+
+        }
+
+
+
+        .love-moment {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 3rem;
+
+        }
+
+
+
+        .spotlight-container {
+
+            position: relative;
+
+            display: flex;
+
+            justify-content: center;
+
+        }
+
+
+
+        .portrait-image-container.featured {
+
+            max-width: 500px;
+
+            margin: 0 auto;
+
+            box-shadow: 0 15px 50px rgba(255, 107, 157, 0.3);
+
+            position: relative;
+
+        }
+
+
+
+        .portrait-image-container.featured::before {
+
+            content: '';
+
+            position: absolute;
+
+            inset: -20px;
+
+            background: radial-gradient(circle, rgba(255, 107, 157, 0.2) 0%, transparent 70%);
+
+            z-index: -1;
+
+            animation: spotlightPulse 3s infinite;
+
+        }
+
+
+
+        @keyframes spotlightPulse {
+
+            0%,
+            100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+
+        }
+
+
+
+        .love-story {
+
+            background: rgba(255, 255, 255, 0.9);
+
+            padding: 3rem;
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 40px rgba(255, 107, 157, 0.15);
+
+        }
+
+
+
+        .love-story h2 {
+
+            font-family: var(--font-display);
+
+            font-size: clamp(2rem, 4vw, 2.8rem);
+
+            color: var(--deep-rose);
+
+            margin-bottom: 1.5rem;
+
+            text-align: center;
+
+        }
+
+
+
+        .love-story p {
+
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+
+            color: var(--text-dark);
+
+            line-height: 1.9;
+
+            text-align: center;
+
+        }
+
+
+
+        .love-photos-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 2rem;
+
+            margin-top: 2rem;
+
+        }
+
+
+
+        .reasons-container {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 4rem;
+
+            padding: 2rem 0;
+
+        }
+
+
+
+        .reason-item {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 3rem;
+
+            align-items: center;
+
+        }
+
+
+
+        .reason-item.reverse {
+
+            direction: rtl;
+
+        }
+
+
+
+        .reason-item.reverse>* {
+
+            direction: ltr;
+
+        }
+
+
+
+        .reason-text {
+
+            padding: 2rem;
+
+        }
+
+
+
+        .reason-text h3 {
+
+            font-family: var(--font-display);
+
+            font-size: 2.2rem;
+
+            color: var(--deep-rose);
+
+            margin-bottom: 1rem;
+
+        }
+
+
+
+        .reason-text p {
+
+            font-size: 1.2rem;
+
+            color: var(--text-dark);
+
+            line-height: 1.8;
+
+        }
+
+
+
+        .valentine-proposal {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: 3rem;
+
+            padding: 2rem;
+
+            text-align: center;
+
+        }
+
+
+
+        .landscape-image-container.centerpiece {
+
+            max-width: 800px;
+
+            width: 100%;
+
+            box-shadow: 0 20px 60px rgba(255, 107, 157, 0.3);
+
+        }
+
+
+
+        .valentine-question {
+
+            font-family: var(--font-display);
+
+            font-size: clamp(2.5rem, 5vw, 4rem);
+
+            color: var(--deep-rose);
+
+            font-weight: 700;
+
+            animation: fadeInScale 1s ease;
+
+        }
+
+
+
+        @keyframes fadeInScale {
+
+            from {
+
+                opacity: 0;
+
+                transform: scale(0.8);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: scale(1);
+
+            }
+
+        }
+
+
+
+        .valentine-buttons {
+
+            display: flex;
+
+            gap: 2rem;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+        }
+
+
+
+        .valentine-btn {
+
+            padding: 1.2rem 3rem;
+
+            font-family: var(--font-display);
+
+            font-size: 1.5rem;
+
+            font-weight: 600;
+
+            border: none;
+
+            border-radius: 50px;
+
+            cursor: pointer;
+
+            transition: var(--transition-bounce);
+
+            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3);
+
+        }
+
+
+
+        .yes-btn {
+
+            background: var(--gradient-romantic);
+
+            color: var(--text-dark);
+
+        }
+
+
+
+        .no-btn {
+
+            background: linear-gradient(135deg, #FF6B9D 0%, #FF1744 100%);
+
+            color: white;
+
+        }
+
+
+
+        .valentine-btn:hover {
+
+            transform: translateY(-5px) scale(1.05);
+
+            box-shadow: 0 12px 35px rgba(255, 107, 157, 0.4);
+
+        }
+
+
+
+        .celebration {
+
+            margin-top: 3rem;
+
+            padding: 3rem;
+
+            background: rgba(255, 255, 255, 0.95);
+
+            border-radius: 20px;
+
+            box-shadow: 0 15px 50px rgba(255, 107, 157, 0.3);
+
+            animation: celebrationAppear 0.8s ease;
+
+        }
+
+
+
+        @keyframes celebrationAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform: scale(0.5) rotate(-10deg);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: scale(1) rotate(0deg);
+
+            }
+
+        }
+
+
+
+        .celebration-text h2 {
+
+            font-family: var(--font-display);
+
+            font-size: 3rem;
+
+            color: var(--deep-rose);
+
+            margin-bottom: 1rem;
+
+        }
+
+
+
+        .celebration-text p {
+
+            font-size: 1.5rem;
+
+            color: var(--text-dark);
+
+        }
+
+
+
+        .confetti-container {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            pointer-events: none;
+
+            z-index: 9999;
+
+        }
+
+
+
+        .image-editor-modal {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background: rgba(74, 28, 46, 0.8);
+
+            backdrop-filter: blur(10px);
+
+            z-index: 2000;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 2rem;
+
+        }
+
+
+
+        .editor-content {
+
+            background: var(--warm-white);
+
+            border-radius: 20px;
+
+            max-width: 800px;
+
+            width: 100%;
+
+            max-height: 90vh;
+
+            overflow-y: auto;
+
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+        }
+
+
+
+        .editor-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 1.5rem 2rem;
+
+            border-bottom: 2px solid var(--primary-rose);
+
+        }
+
+
+
+        .editor-header h3 {
+
+            font-family: var(--font-display);
+
+            font-size: 1.8rem;
+
+            color: var(--deep-rose);
+
+        }
+
+
+
+        .close-editor {
+
+            width: 40px;
+
+            height: 40px;
+
+            border-radius: 50%;
+
+            border: 2px solid var(--deep-rose);
+
+            background: transparent;
+
+            font-size: 1.5rem;
+
+            cursor: pointer;
+
+            transition: var(--transition-smooth);
+
+        }
+
+
+
+        .close-editor:hover {
+
+            background: var(--deep-rose);
+
+            color: white;
+
+            transform: rotate(90deg);
+
+        }
+
+
+
+        .editor-body {
+
+            padding: 2rem;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 2rem;
+
+        }
+
+
+
+        .editor-preview {
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            background: var(--soft-pink);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+
+        .editor-preview img {
+
+            max-width: 100%;
+
+            max-height: 400px;
+
+            object-fit: contain;
+
+        }
+
+
+
+        .editor-controls {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 1.5rem;
+
+        }
+
+
+
+        .control-group {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 0.5rem;
+
+        }
+
+
+
+        .control-group label {
+
+            font-family: var(--font-display);
+
+            font-size: 1.1rem;
+
+            color: var(--text-dark);
+
+            font-weight: 600;
+
+        }
+
+
+
+        .size-slider {
+
+            width: 100%;
+
+            accent-color: var(--deep-rose);
+
+        }
+
+
+
+        .size-value {
+
+            font-size: 1rem;
+
+            color: var(--text-medium);
+
+            text-align: center;
+
+        }
+
+
+
+        .position-controls {
+
+            display: flex;
+
+            gap: 0.5rem;
+
+        }
+
+
+
+        .position-btn {
+
+            flex: 1;
+
+            padding: 0.75rem;
+
+            background: var(--soft-pink);
+
+            border: 2px solid var(--deep-rose);
+
+            border-radius: 10px;
+
+            font-family: var(--font-display);
+
+            cursor: pointer;
+
+            transition: var(--transition-smooth);
+
+        }
+
+
+
+        .position-btn:hover,
+
+        .position-btn.active {
+
+            background: var(--deep-rose);
+
+            color: white;
+
+        }
+
+
+
+        .frame-select {
+
+            padding: 0.75rem;
+
+            border: 2px solid var(--deep-rose);
+
+            border-radius: 10px;
+
+            font-family: var(--font-body);
+
+            font-size: 1rem;
+
+            background: var(--warm-white);
+
+        }
+
+
+
+        .editor-footer {
+
+            padding: 1.5rem 2rem;
+
+            border-top: 2px solid var(--primary-rose);
+
+            display: flex;
+
+            justify-content: flex-end;
+
+            gap: 1rem;
+
+        }
+
+
+
+        .editor-btn {
+
+            padding: 0.75rem 2rem;
+
+            font-family: var(--font-display);
+
+            font-weight: 600;
+
+            border: none;
+
+            border-radius: 30px;
+
+            cursor: pointer;
+
+            transition: var(--transition-smooth);
+
+        }
+
+
+
+        .cancel-btn {
+
+            background: var(--soft-pink);
+
+            color: var(--text-dark);
+
+        }
+
+
+
+        .save-btn {
+
+            background: var(--gradient-romantic);
+
+            color: var(--text-dark);
+
+            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+
+        }
+
+
+
+        .editor-btn:hover {
+
+            transform: translateY(-2px);
+
+        }
+
+
+
+        .frame-rounded img {
+
+            border-radius: 20px;
+
+        }
+
+
+
+        .frame-heart {
+
+            clip-path: url(#heartClip);
+
+        }
+
+
+
+        .frame-polaroid {
+
+            padding: 15px;
+
+            background: white;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+        }
+
+
+
+        @media (max-width: 968px) {
+
+            .nav-links {
+
+                font-size: 0.85rem;
+
+                gap: 0.75rem;
+
+            }
+
+
+
+            .nav-link {
+
+                padding: 0.4rem 0.8rem;
+
+            }
+
+
+
+            .timeline::before {
+
+                left: 30px;
+
+            }
+
+
+
+            .timeline-item,
+
+            .reason-item {
+
+                grid-template-columns: 1fr;
+
+                gap: 1.5rem;
+
+            }
+
+
+
+            .timeline-item.reverse,
+
+            .reason-item.reverse {
+
+                direction: ltr;
+
+            }
+
+
+
+            .friendship-gallery {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .editor-body {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .love-photos-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+
+        @media (max-width: 640px) {
+
+            .nav-bar {
+
+                flex-direction: column;
+
+                gap: 1rem;
+
+                padding: 1rem;
+
+            }
+
+
+
+            .nav-links {
+
+                justify-content: center;
+
+                width: 100%;
+
+            }
+
+
+
+            .page {
+
+                padding: 5rem 1rem 2rem;
+
+            }
+
+
+
+            .valentine-buttons {
+
+                flex-direction: column;
+
+                width: 100%;
+
+            }
+
+
+
+            .valentine-btn {
+
+                width: 100%;
+
+            }
+
+
+
+            .image-slot.landscape {
+
+                min-height: 250px;
+
+            }
+
+
+
+            .image-slot.portrait {
+
+                min-height: 300px;
+
+            }
+
+        }
+
+
+
+        [contenteditable="true"] {
+
+            outline: 2px dashed transparent;
+
+            padding: 0.25rem;
+
+            border-radius: 5px;
+
+            transition: var(--transition-smooth);
+
+        }
+
+
+
+        [contenteditable="true"]:hover {
+
+            outline-color: var(--secondary-rose);
+
+        }
+
+
+
+        [contenteditable="true"]:focus {
+
+            outline-color: var(--deep-rose);
+
+            background: rgba(255, 228, 230, 0.3);
+
+        }
+
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+
+            *::before,
+
+            *::after {
+
+                animation-duration: 0.01ms !important;
+
+                animation-iteration-count: 1 !important;
+
+                transition-duration: 0.01ms !important;
+
+            }
+
+        }
+
+
+
+        @media print {
+
+            .nav-bar,
+
+            .music-toggle,
+
+            .floating-hearts,
+
+            .image-controls,
+
+            .upload-btn {
+
+                display: none !important;
+
+            }
+
+
+
+            .page {
+
+                display: block !important;
+
+                opacity: 1 !important;
+
+                page-break-after: always;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <button id="musicToggle" class="music-toggle" aria-label="Toggle music">
+
+        <svg class="icon-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+            <path
+                d="M9 18V5l12-2v13M9 18c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zM21 16c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z" />
+
+        </svg>
+
+    </button>
+
+    <audio id="bgMusic" loop>
+
+        <source src="" type="audio/mpeg">
+
+    </audio>
+
+
+
+    <div class="floating-hearts"></div>
+
+
+
+    <nav class="nav-bar">
+
+        <div class="nav-logo">❤️</div>
+
+        <div class="nav-links">
+
+            <a href="#page1" class="nav-link active" data-page="1">Home</a>
+
+            <a href="#page2" class="nav-link" data-page="2">How We Met</a>
+
+            <a href="#page3" class="nav-link" data-page="3">Friendship</a>
+
+            <a href="#page4" class="nav-link" data-page="4">Love Happened</a>
+
+            <a href="#page5" class="nav-link" data-page="5">Why I Love You</a>
+
+            <a href="#page6" class="nav-link" data-page="6">Be Mine</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <section id="page1" class="page active" data-page="1">
+
+        <div class="page-container">
+
+            <div class="hero-text-section">
+
+                <h1 class="hero-title animate-in">Our Story</h1>
+
+                <p class="hero-subtitle animate-in delay-1">This is where it all began, a story written in stolen
+                    glances, shared laughter, and moments that turned into memories</p>
+
+                <div class="hero-divider animate-in delay-2"></div>
+
+            </div>
+
+
+
+            <div class="hero-section">
+
+                <div class="landscape-image-container" data-orientation="landscape">
+
+                    <div class="image-slot landscape" data-slot="hero-1">
+
+                        <div class="image-placeholder" style="display: none;">
+
+                            <div class="placeholder-icon">🖼️</div>
+
+                            <p>Click to add landscape image (16:9)</p>
+
+                            <button class="upload-btn">Upload Image</button>
+
+                        </div>
+
+                        <div class="image-preview" style="display: block;">
+
+                            <img src="Page 1 - Home.jpg.jpeg" alt="Hero image">
+
+                            <div class="image-controls">
+
+                                <button class="control-btn resize-btn" title="Resize">↔️</button>
+
+                                <button class="control-btn delete-btn" title="Remove">🗑️</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="welcome-section">
+
+                <h2 class="section-title" contenteditable="true">Our Story</h2>
+
+                <p class="section-text" contenteditable="true">
+
+                    This is where it all began — a story written in stolen glances,
+
+                    shared laughter, and moments that turned into memories.
+
+                    Scroll through our journey, page by page, heart by heart.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="page2" class="page" data-page="2">
+
+        <div class="page-container">
+
+            <h1 class="page-title">How We Met</h1>
+
+            <p class="page-subtitle">5 Years Ago...</p>
+
+
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-content">
+
+                        <h3 contenteditable="true">Our First Year</h3>
+
+                        <p contenteditable="true">
+
+                            I remember the moment our paths crossed for the first time...
+
+                        </p>
+
+                    </div>
+
+                    <div class="portrait-image-container" data-orientation="portrait">
+
+                        <div class="image-slot portrait" data-slot="meet-1">
+
+                            <div class="image-placeholder" style="display: none;">
+
+                                <div class="placeholder-icon">📸</div>
+
+                                <p>Add portrait image (3:4 or 4:5)</p>
+
+                                <button class="upload-btn">Upload Image</button>
+
+                            </div>
+
+                            <div class="image-preview" style="display: block;">
+
+                                <img src="How we met 1.jpeg" alt="Meeting photo">
+
+                                <div class="image-controls">
+
+                                    <button class="control-btn resize-btn" title="Resize">↔️</button>
+
+                                    <button class="control-btn delete-btn" title="Remove">🗑️</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="page3" class="page" data-page="3">
+
+        <div class="page-container">
+
+            <h1 class="page-title">The Friendship Era</h1>
+
+            <p class="page-subtitle">Best friends, partners in crime</p>
+
+
+
+            <div class="friendship-gallery">
+
+                <div class="gallery-card">
+
+                    <div class="portrait-image-container" data-orientation="portrait">
+
+                        <div class="image-slot portrait" data-slot="friend-1">
+
+                            <div class="image-placeholder" style="display: none;">
+
+                                <div class="placeholder-icon">📸</div>
+
+                                <p>Add portrait image</p>
+
+                                <button class="upload-btn">Upload Image</button>
+
+                            </div>
+
+                            <div class="image-preview" style="display: block;">
+
+                                <img src="Friendship photo1.jpeg" alt="Friendship photo">
+
+                                <div class="image-controls">
+
+                                    <button class="control-btn resize-btn" title="Resize">↔️</button>
+
+                                    <button class="control-btn delete-btn" title="Remove">🗑️</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-caption">
+
+                        <h3 contenteditable="true">Your Birthday</h3>
+
+                        <p contenteditable="true">Every moment was fun</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="gallery-card">
+
+                    <div class="portrait-image-container" data-orientation="portrait">
+
+                        <div class="image-slot portrait" data-slot="friend-2">
+
+                            <div class="image-placeholder" style="display: none;">
+
+                                <div class="placeholder-icon">📸</div>
+
+                                <p>Add portrait image</p>
+
+                                <button class="upload-btn">Upload Image</button>
+
+                            </div>
+
+                            <div class="image-preview" style="display: block;">
+
+                                <img src="Friendship photo 2.jpeg" alt="Friendship photo">
+
+                                <div class="image-controls">
+
+                                    <button class="control-btn resize-btn" title="Resize">↔️</button>
+
+                                    <button class="control-btn delete-btn" title="Remove">🗑️</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-caption">
+
+                        <h3 contenteditable="true">My Birthday</h3>
+
+                        <p contenteditable="true">Your laugh became my favorite sound</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="gallery-card">
+
+                    <div class="portrait-image-container" data-orientation="portrait">
+
+                        <div class="image-slot portrait" data-slot="friend-3">
+
+                            <div class="image-placeholder" style="display: none;">
+
+                                <div class="placeholder-icon">📸</div>
+
+                                <p>Add portrait image</p>
+
+                                <button class="upload-btn">Upload Image</button>
+
+                            </div>
+
+                            <div class="image-preview" style="display: block;">
+
+                                <img src="Friendship photo 3.jpeg" alt="Friendship photo">
+
+                                <div class="image-controls">
+
+                                    <button class="control-btn resize-btn" title="Resize">↔️</button>
+
+                                    <button class="control-btn delete-btn" title="Remove">🗑️</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-caption">
+
+                        <h3 contenteditable="true">First Saree Moment</h3>
+
+                        <p contenteditable="true">Hours felt like minutes when talking to you</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="page4" class="page" data-page="4">
+
+        <div class="page-container">
+
+            <h1 class="page-title">When Love Happened</h1>
+
+            <p class="page-subtitle">3 Months Ago </p>
+
+
+
+            <div class="love-moment">
+
+                <div class="spotlight-container">
+
+                    <div class="portrait-image-container featured" data-orientation="portrait">
+
+                        <div class="image-slot portrait featured" data-slot="love-1">
+
+                            <div class="image-placeholder" style="display: none;">
+
+                                <div class="placeholder-icon">💕</div>
+
+                                <p>Add the special moment (portrait)</p>
+
+                                <button class="upload-btn">Upload Image</button>
+
+                            </div>
+
+                            <div class="image-preview" style="display: block;">
+
+                                <img src="Love happened photo 1.jpeg" alt="Love moment">
+
+                                <div class="image-controls">
+
+                                    <button class="control-btn resize-btn" title="Resize">↔️</button>
+
+                                    <button class="control-btn delete-btn" title="Remove">🗑️</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="love-story">
+
+                    <h2 contenteditable="true">The Moment Everything Changed</h2>
+
+                    <p contenteditable="true">
+
+                        After years of friendship, something shifted. The way you looked at me,
+
+                        the way my heart raced when you smiled I couldn't deny it anymore.
+
+                        What started as friendship had quietly grown into something more,
+
+                        something deeper, something that felt like coming home.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="love-photos-grid">
+
+                    <div class="portrait-image-container" data-orientation="portrait">
+
+                        <div class="image-slot portrait" data-slot="love-2">
+
+                            <div class="image-placeholder" style="display: none;">
+
+                                <div class="placeholder-icon">💕</div>
+
+                                <p>Add image</p>
+
+                                <button class="upload-btn">Upload Image</button>
+
+                            </div>
+
+                            <div class="image-preview" style="display: block;">
+
+                                <img src="Love happened photo 2.jpg.jpeg" alt="Love photo">
+
+                                <div class="image-controls">
+
+                                    <button class="control-btn resize-btn" title="Resize">↔️</button>
+
+                                    <button class="control-btn delete-btn" title="Remove">🗑️</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="portrait-image-container" data-orientation="portrait">
+
+                        <div class="image-slot portrait" data-slot="love-3">
+
+                            <div class="image-placeholder" style="display: none;">
+
+                                <div class="placeholder-icon">💕</div>
+
+                                <p>Add image</p>
+
+                                <button class="upload-btn">Upload Image</button>
+
+                            </div>
+
+                            <div class="image-preview" style="display: block;">
+
+                                <img src="Love happened photo 3.jpg.jpeg" alt="Love photo">
+
+                                <div class="image-controls">
+
+                                    <button class="control-btn resize-btn" title="Resize">↔️</button>
+
+                                    <button class="control-btn delete-btn" title="Remove">🗑️</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="page5" class="page" data-page="5">
+
+        <div class="page-container">
+
+            <h1 class="page-title">Why I Love You</h1>
+
+            <p class="page-subtitle">Let me count the ways...</p>
+
+
+
+            <div class="reasons-container">
+
+                <div class="reason-item">
+
+                    <div class="portrait-image-container" data-orientation="portrait">
+
+                        <div class="image-slot portrait" data-slot="reason-1">
+
+                            <div class="image-placeholder" style="display: none;">
+
+                                <div class="placeholder-icon">💖</div>
+
+                                <p>Add portrait image</p>
+
+                                <button class="upload-btn">Upload Image</button>
+
+                            </div>
+
+                            <div class="image-preview" style="display: block;">
+
+                                <img src="why i love you photo 1.jpg.jpeg" alt="Reason photo">
+
+                                <div class="image-controls">
+
+                                    <button class="control-btn resize-btn" title="Resize">↔️</button>
+
+                                    <button class="control-btn delete-btn" title="Remove">🗑️</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="reason-text">
+
+                        <h3 contenteditable="true">Your Warmth</h3>
+
+                        <p contenteditable="true">
+
+                            Your smile lights up my entire world. It's the first thing I think about
+
+                            when I wake up and the last thing I picture before I sleep.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="reason-item reverse">
+
+                    <div class="reason-text">
+
+                        <h3 contenteditable="true">Your Kindness</h3>
+
+                        <p contenteditable="true">
+
+                            The way you care for others, the gentleness in your heart —
+
+                            it's one of the most beautiful things about you.
+
+                        </p>
+
+                    </div>
+
+                    <div class="portrait-image-container" data-orientation="portrait">
+
+                        <div class="image-slot portrait" data-slot="reason-2">
+
+                            <div class="image-placeholder" style="display: none;">
+
+                                <div class="placeholder-icon">💖</div>
+
+                                <p>Add portrait image</p>
+
+                                <button class="upload-btn">Upload Image</button>
+
+                            </div>
+
+                            <div class="image-preview" style="display: block;">
+
+                                <img src="Why i love you photo 2.jpg.jpeg" alt="Reason photo">
+
+                                <div class="image-controls">
+
+                                    <button class="control-btn resize-btn" title="Resize">↔️</button>
+
+                                    <button class="control-btn delete-btn" title="Remove">🗑️</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="reason-item">
+
+                    <div class="portrait-image-container" data-orientation="portrait">
+
+                        <div class="image-slot portrait" data-slot="reason-3">
+
+                            <div class="image-placeholder" style="display: none;">
+
+                                <div class="placeholder-icon">💖</div>
+
+                                <p>Add portrait image</p>
+
+                                <button class="upload-btn">Upload Image</button>
+
+                            </div>
+
+                            <div class="image-preview" style="display: block;">
+
+                                <img src="why i love you photo 3.jpg.jpeg" alt="Reason photo">
+
+                                <div class="image-controls">
+
+                                    <button class="control-btn resize-btn" title="Resize">↔️</button>
+
+                                    <button class="control-btn delete-btn" title="Remove">🗑️</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="reason-text">
+
+                        <h3 contenteditable="true">How You Make Me Feel</h3>
+
+                        <p contenteditable="true">
+
+                            With you, I feel safe, cherished, and completely myself.
+
+                            You bring out the best in me every single day.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="reason-item reverse">
+
+                    <div class="reason-text">
+
+                        <h3 contenteditable="true">You Complete me </h3>
+
+                        <p contenteditable="true">
+
+                            Your presence helps me feel complete.
+
+
+                        </p>
+
+                    </div>
+
+                    <div class="portrait-image-container" data-orientation="portrait">
+
+                        <div class="image-slot portrait" data-slot="reason-4">
+
+                            <div class="image-placeholder" style="display: none;">
+
+                                <div class="placeholder-icon">💖</div>
+
+                                <p>Add portrait image</p>
+
+                                <button class="upload-btn">Upload Image</button>
+
+                            </div>
+
+                            <div class="image-preview" style="display: block;">
+
+                                <img src="why i love you photo 4.jpg.jpeg" alt="Reason photo">
+
+                                <div class="image-controls">
+
+                                    <button class="control-btn resize-btn" title="Resize">↔️</button>
+
+                                    <button class="control-btn delete-btn" title="Remove">🗑️</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="page6" class="page" data-page="6">
+
+        <div class="page-container">
+
+            <div class="valentine-proposal">
+
+                <div class="landscape-image-container centerpiece" data-orientation="landscape">
+
+                    <div class="image-slot landscape centerpiece" data-slot="valentine-1">
+
+                        <div class="image-placeholder" style="display: none;">
+
+                            <div class="placeholder-icon">💝</div>
+
+                            <p>Add your favorite landscape photo together</p>
+
+                            <button class="upload-btn">Upload Image</button>
+
+                        </div>
+
+                        <div class="image-preview" style="display: block;">
+
+                            <img src="be mine photo.jpg.jpeg" alt="Valentine photo">
+
+                            <div class="image-controls">
+
+                                <button class="control-btn resize-btn" title="Resize">↔️</button>
+
+                                <button class="control-btn delete-btn" title="Remove">🗑️</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <h1 class="valentine-question">Will You Be My Valentine? 💘</h1>
+
+
+
+                <div class="valentine-buttons">
+
+                    <button class="valentine-btn yes-btn">Yes! ❤️</button>
+
+                    <button class="valentine-btn no-btn">Also Yes! 💕</button>
+
+                </div>
+
+
+
+                <div class="celebration" style="display: none;">
+
+                    <div class="celebration-text">
+
+                        <h2>You said YES! 🎉</h2>
+
+                        <p>You've made me the happiest person alive! Here's to forever with you 💖</p>
+
+                    </div>
+
+                    <div class="confetti-container"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <div class="image-editor-modal" style="display: none;">
+
+        <div class="editor-content">
+
+            <div class="editor-header">
+
+                <h3>Customize Image</h3>
+
+                <button class="close-editor">✕</button>
+
+            </div>
+
+            <div class="editor-body">
+
+                <div class="editor-preview">
+
+                    <img src="" alt="Preview">
+
+                </div>
+
+                <div class="editor-controls">
+
+                    <div class="control-group">
+
+                        <label>Size</label>
+
+                        <input type="range" class="size-slider" min="50" max="150" value="100">
+
+                        <span class="size-value">100%</span>
+
+                    </div>
+
+                    <div class="control-group">
+
+                        <label>Position</label>
+
+                        <div class="position-controls">
+
+                            <button class="position-btn" data-position="top">Top</button>
+
+                            <button class="position-btn" data-position="center">Center</button>
+
+                            <button class="position-btn" data-position="bottom">Bottom</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="control-group">
+
+                        <label>Frame Style</label>
+
+                        <select class="frame-select">
+
+                            <option value="none">No Frame</option>
+
+                            <option value="rounded">Rounded</option>
+
+                            <option value="heart">Heart Shape</option>
+
+                            <option value="polaroid">Polaroid</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="editor-footer">
+
+                <button class="editor-btn cancel-btn">Cancel</button>
+
+                <button class="editor-btn save-btn">Save Changes</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        const imageData = {};
+
+        let currentEditingSlot = null;
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            initializeNavigation();
+
+            initializeImageUpload();
+
+            initializeMusicToggle();
+
+            initializeFloatingHearts();
+
+            initializeValentineButtons();
+
+            loadSavedImages();
+
+        });
+
+
+
+        function initializeNavigation() {
+
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const pages = document.querySelectorAll('.page');
+
+
+
+            navLinks.forEach(link => {
+
+                link.addEventListener('click', (e) => {
+
+                    e.preventDefault();
+
+                    const pageNum = link.getAttribute('data-page');
+
+                    navLinks.forEach(l => l.classList.remove('active'));
+
+                    link.classList.add('active');
+
+                    pages.forEach(page => {
+
+                        page.classList.remove('active');
+
+                        if (page.getAttribute('data-page') === pageNum) {
+
+                            setTimeout(() => page.classList.add('active'), 50);
+
+                        }
+
+                    });
+
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                });
+
+            });
+
+        }
+
+
+
+        function initializeImageUpload() {
+
+            const imageSlots = document.querySelectorAll('.image-slot');
+
+
+
+            imageSlots.forEach(slot => {
+
+                const uploadBtn = slot.querySelector('.upload-btn');
+
+                const placeholder = slot.querySelector('.image-placeholder');
+
+                const preview = slot.querySelector('.image-preview');
+
+                const slotId = slot.getAttribute('data-slot');
+
+
+
+                const fileInput = document.createElement('input');
+
+                fileInput.type = 'file';
+
+                fileInput.accept = 'image/*';
+
+                fileInput.style.display = 'none';
+
+                slot.appendChild(fileInput);
+
+
+
+                uploadBtn.addEventListener('click', () => fileInput.click());
+
+
+
+                fileInput.addEventListener('change', (e) => {
+
+                    const file = e.target.files[0];
+
+                    if (file && file.type.startsWith('image/')) {
+
+                        loadImage(file, slot, slotId);
+
+                    }
+
+                });
+
+
+
+                slot.addEventListener('dragover', (e) => {
+
+                    e.preventDefault();
+
+                    slot.style.background = 'rgba(255, 107, 157, 0.1)';
+
+                });
+
+
+
+                slot.addEventListener('dragleave', () => {
+
+                    slot.style.background = '';
+
+                });
+
+
+
+                slot.addEventListener('drop', (e) => {
+
+                    e.preventDefault();
+
+                    slot.style.background = '';
+
+                    const file = e.dataTransfer.files[0];
+
+                    if (file && file.type.startsWith('image/')) {
+
+                        loadImage(file, slot, slotId);
+
+                    }
+
+                });
+
+
+
+                const resizeBtn = slot.querySelector('.resize-btn');
+
+                const deleteBtn = slot.querySelector('.delete-btn');
+
+
+
+                if (resizeBtn) resizeBtn.addEventListener('click', () => openImageEditor(slotId));
+
+                if (deleteBtn) deleteBtn.addEventListener('click', () => removeImage(slotId));
+
+            });
+
+        }
+
+
+
+        function loadImage(file, slot, slotId) {
+
+            const reader = new FileReader();
+
+
+
+            reader.onload = (e) => {
+
+                const imageUrl = e.target.result;
+
+                const placeholder = slot.querySelector('.image-placeholder');
+
+                const preview = slot.querySelector('.image-preview');
+
+                const img = preview.querySelector('img');
+
+
+
+                imageData[slotId] = {
+
+                    url: imageUrl,
+
+                    size: 100,
+
+                    position: 'center',
+
+                    frame: 'none'
+
+                };
+
+
+
+                img.src = imageUrl;
+
+                placeholder.style.display = 'none';
+
+                preview.style.display = 'block';
+
+                preview.style.animation = 'fadeInScale 0.5s ease';
+
+                saveImages();
+
+                showNotification('Image uploaded successfully! ❤️');
+
+            };
+
+
+
+            reader.readAsDataURL(file);
+
+        }
+
+
+
+        function removeImage(slotId) {
+
+            const slot = document.querySelector(`[data-slot="${slotId}"]`);
+
+            const placeholder = slot.querySelector('.image-placeholder');
+
+            const preview = slot.querySelector('.image-preview');
+
+
+
+            preview.style.animation = 'fadeOut 0.3s ease';
+
+
+
+            setTimeout(() => {
+
+                preview.style.display = 'none';
+
+                placeholder.style.display = 'block';
+
+                delete imageData[slotId];
+
+                saveImages();
+
+                showNotification('Image removed');
+
+            }, 300);
+
+        }
+
+
+
+        function openImageEditor(slotId) {
+
+            const modal = document.querySelector('.image-editor-modal');
+
+            const editorImg = modal.querySelector('.editor-preview img');
+
+            const sizeSlider = modal.querySelector('.size-slider');
+
+            const sizeValue = modal.querySelector('.size-value');
+
+            const positionBtns = modal.querySelectorAll('.position-btn');
+
+            const frameSelect = modal.querySelector('.frame-select');
+
+            const saveBtn = modal.querySelector('.save-btn');
+
+            const cancelBtn = modal.querySelector('.cancel-btn');
+
+            const closeBtn = modal.querySelector('.close-editor');
+
+
+
+            currentEditingSlot = slotId;
+
+            const data = imageData[slotId];
+
+
+
+            if (!data) return;
+
+
+
+            editorImg.src = data.url;
+
+            sizeSlider.value = data.size;
+
+            sizeValue.textContent = data.size + '%';
+
+            frameSelect.value = data.frame;
+
+
+
+            positionBtns.forEach(btn => {
+
+                btn.classList.remove('active');
+
+                if (btn.getAttribute('data-position') === data.position) {
+
+                    btn.classList.add('active');
+
+                }
+
+            });
+
+
+
+            modal.style.display = 'flex';
+
+            modal.style.animation = 'fadeIn 0.3s ease';
+
+
+
+            sizeSlider.addEventListener('input', (e) => {
+
+                const value = e.target.value;
+
+                sizeValue.textContent = value + '%';
+
+                editorImg.style.transform = `scale(${value / 100})`;
+
+            });
+
+
+
+            positionBtns.forEach(btn => {
+
+                btn.addEventListener('click', () => {
+
+                    positionBtns.forEach(b => b.classList.remove('active'));
+
+                    btn.classList.add('active');
+
+                    const position = btn.getAttribute('data-position');
+
+                    editorImg.style.objectPosition = position;
+
+                });
+
+            });
+
+
+
+            saveBtn.addEventListener('click', () => {
+
+                const activePosition = document.querySelector('.position-btn.active');
+
+                imageData[slotId].size = parseInt(sizeSlider.value);
+
+                imageData[slotId].position = activePosition ? activePosition.getAttribute('data-position') : 'center';
+
+                imageData[slotId].frame = frameSelect.value;
+
+                applyImageSettings(slotId);
+
+                saveImages();
+
+                closeEditor();
+
+                showNotification('Changes saved! 💕');
+
+            });
+
+
+
+            cancelBtn.addEventListener('click', closeEditor);
+
+            closeBtn.addEventListener('click', closeEditor);
+
+            modal.addEventListener('click', (e) => {
+
+                if (e.target === modal) closeEditor();
+
+            });
+
+        }
+
+
+
+        function closeEditor() {
+
+            const modal = document.querySelector('.image-editor-modal');
+
+            modal.style.animation = 'fadeOut 0.3s ease';
+
+            setTimeout(() => modal.style.display = 'none', 300);
+
+        }
+
+
+
+        function applyImageSettings(slotId) {
+
+            const slot = document.querySelector(`[data-slot="${slotId}"]`);
+
+            const preview = slot.querySelector('.image-preview');
+
+            const img = preview.querySelector('img');
+
+            const data = imageData[slotId];
+
+
+
+            if (!data) return;
+
+
+
+            img.style.transform = `scale(${data.size / 100})`;
+
+            img.style.objectPosition = data.position;
+
+            preview.className = 'image-preview';
+
+            if (data.frame !== 'none') {
+
+                preview.classList.add(`frame-${data.frame}`);
+
+            }
+
+        }
+
+
+
+        function saveImages() {
+
+            localStorage.setItem('valentineImages', JSON.stringify(imageData));
+
+        }
+
+
+
+        function loadSavedImages() {
+
+            const saved = localStorage.getItem('valentineImages');
+
+            if (saved) {
+
+                const data = JSON.parse(saved);
+
+                Object.keys(data).forEach(slotId => {
+
+                    const slot = document.querySelector(`[data-slot="${slotId}"]`);
+
+                    if (slot) {
+
+                        const placeholder = slot.querySelector('.image-placeholder');
+
+                        const preview = slot.querySelector('.image-preview');
+
+                        const img = preview.querySelector('img');
+
+
+
+                        imageData[slotId] = data[slotId];
+
+                        img.src = data[slotId].url;
+
+                        placeholder.style.display = 'none';
+
+                        preview.style.display = 'block';
+
+                        applyImageSettings(slotId);
+
+                    }
+
+                });
+
+            }
+
+        }
+
+
+
+        function initializeMusicToggle() {
+
+            const musicToggle = document.getElementById('musicToggle');
+
+            const bgMusic = document.getElementById('bgMusic');
+
+
+
+            musicToggle.addEventListener('click', () => {
+
+                if (bgMusic.paused) {
+
+                    bgMusic.play().then(() => {
+
+                        musicToggle.classList.add('playing');
+
+                        showNotification('Music playing 🎵');
+
+                    }).catch(() => {
+
+                        showNotification('Please add a music file!');
+
+                    });
+
+                } else {
+
+                    bgMusic.pause();
+
+                    musicToggle.classList.remove('playing');
+
+                    showNotification('Music paused');
+
+                }
+
+            });
+
+        }
+
+
+
+        function initializeFloatingHearts() {
+
+            const container = document.querySelector('.floating-hearts');
+
+            const heartEmojis = ['❤️', '💕', '💖', '💗', '💝', '💘'];
+
+
+
+            setInterval(() => createFloatingHeart(container, heartEmojis), 3000);
+
+        }
+
+
+
+        function createFloatingHeart(container, emojis) {
+
+            const heart = document.createElement('div');
+
+            heart.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+            heart.style.position = 'absolute';
+
+            heart.style.fontSize = Math.random() * 1 + 1 + 'rem';
+
+            heart.style.left = Math.random() * 100 + '%';
+
+            heart.style.bottom = '-10%';
+
+            heart.style.opacity = '0';
+
+            heart.style.animation = `floatHeart ${10 + Math.random() * 10}s linear`;
+
+            heart.style.pointerEvents = 'none';
+
+
+
+            container.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 20000);
+
+        }
+
+
+
+        function initializeValentineButtons() {
+
+            const yesBtn = document.querySelector('.yes-btn');
+
+            const noBtn = document.querySelector('.no-btn');
+
+            const celebration = document.querySelector('.celebration');
+
+            const valentineButtons = document.querySelector('.valentine-buttons');
+
+            const valentineQuestion = document.querySelector('.valentine-question');
+
+
+
+            const celebrate = () => {
+
+                valentineButtons.style.animation = 'fadeOut 0.5s ease';
+
+                valentineQuestion.style.animation = 'fadeOut 0.5s ease';
+
+
+
+                setTimeout(() => {
+
+                    valentineButtons.style.display = 'none';
+
+                    valentineQuestion.style.display = 'none';
+
+                    celebration.style.display = 'block';
+
+                    createConfetti();
+
+                    showNotification('💖 CONGRATULATIONS! 💖');
+
+                }, 500);
+
+            };
+
+
+
+            yesBtn.addEventListener('click', celebrate);
+
+            noBtn.addEventListener('click', celebrate);
+
+        }
+
+
+
+        function createConfetti() {
+
+            const container = document.querySelector('.confetti-container');
+
+            const colors = ['#FFE4E6', '#FFC1CC', '#FF6B9D', '#FF1744', '#FFB6C1'];
+
+            const shapes = ['❤️', '💕', '💖', '💗', '💝', '💘', '🌹', '✨'];
+
+
+
+            for (let i = 0; i < 50; i++) {
+
+                setTimeout(() => createConfettiPiece(container, colors, shapes), i * 30);
+
+            }
+
+        }
+
+
+
+        function createConfettiPiece(container, colors, shapes) {
+
+            const piece = document.createElement('div');
+
+            const isEmoji = Math.random() > 0.5;
+
+
+
+            if (isEmoji) {
+
+                piece.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+
+                piece.style.fontSize = Math.random() * 1.5 + 1 + 'rem';
+
+            } else {
+
+                piece.style.width = Math.random() * 10 + 5 + 'px';
+
+                piece.style.height = Math.random() * 10 + 5 + 'px';
+
+                piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+                piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+
+            }
+
+
+
+            piece.style.position = 'fixed';
+
+            piece.style.left = Math.random() * 100 + '%';
+
+            piece.style.top = '-10%';
+
+            piece.style.opacity = '1';
+
+            piece.style.pointerEvents = 'none';
+
+            piece.style.zIndex = '10000';
+
+
+
+            const duration = Math.random() * 3 + 2;
+
+            const rotation = Math.random() * 360;
+
+            const xMovement = Math.random() * 200 - 100;
+
+
+
+            container.appendChild(piece);
+
+
+
+            piece.animate([
+
+                { transform: `translateY(0) translateX(0) rotate(0deg)`, opacity: 1 },
+
+                { transform: `translateY(100vh) translateX(${xMovement}px) rotate(${rotation * 3}deg)`, opacity: 0 }
+
+            ], {
+
+                duration: duration * 1000,
+
+                easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+
+            });
+
+
+
+            setTimeout(() => piece.remove(), duration * 1000);
+
+        }
+
+
+
+        function showNotification(message) {
+
+            const existing = document.querySelector('.notification');
+
+            if (existing) existing.remove();
+
+
+
+            const notification = document.createElement('div');
+
+            notification.className = 'notification';
+
+            notification.textContent = message;
+
+            notification.style.cssText = `
+
+        position: fixed;
+
+        bottom: 30px;
+
+        right: 30px;
+
+        background: linear-gradient(135deg, #FFE4E6 0%, #FFC1CC 100%);
+
+        color: #4A1C2E;
+
+        padding: 1rem 2rem;
+
+        border-radius: 50px;
+
+        box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3);
+
+        font-family: 'Crimson Text', serif;
+
+        font-size: 1.1rem;
+
+        z-index: 10000;
+
+        animation: slideInUp 0.5s ease, slideOutDown 0.5s ease 2.5s;
+
+        pointer-events: none;
+
+    `;
+
+
+
+            document.body.appendChild(notification);
+
+            setTimeout(() => notification.remove(), 3000);
+
+        }
+
+
+
+        const style = document.createElement('style');
+
+        style.textContent = `
+
+    @keyframes confettiFall {
+
+        to { transform: translateY(100vh); opacity: 0; }
+
+    }
+
+    @keyframes fadeIn {
+
+        from { opacity: 0; }
+
+        to { opacity: 1; }
+
+    }
+
+    @keyframes fadeOut {
+
+        from { opacity: 1; }
+
+        to { opacity: 0; }
+
+    }
+
+    @keyframes slideInUp {
+
+        from { transform: translateY(100px); opacity: 0; }
+
+        to { transform: translateY(0); opacity: 1; }
+
+    }
+
+    @keyframes slideOutDown {
+
+        from { transform: translateY(0); opacity: 1; }
+
+        to { transform: translateY(100px); opacity: 0; }
+
+    }
+
+`;
+
+        document.head.appendChild(style);
+
+
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+            anchor.addEventListener('click', function (e) {
+
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+
+                if (target) {
+
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                }
+
+            });
+
+        });
+
+
+
+        const observerOptions = {
+
+            threshold: 0.1,
+
+            rootMargin: '0px 0px -50px 0px'
+
+        };
+
+
+
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.style.animation = 'fadeInUp 0.8s ease both';
+
+                }
+
+            });
+
+        }, observerOptions);
+
+
+
+        document.querySelectorAll('.timeline-item, .gallery-card, .reason-item').forEach(el => {
+
+            observer.observe(el);
+
+        });
+
+
+
+        document.addEventListener('keydown', (e) => {
+
+            const currentPage = document.querySelector('.page.active');
+
+            const currentPageNum = parseInt(currentPage.getAttribute('data-page'));
+
+
+
+            if (e.key === 'ArrowRight' && currentPageNum < 6) {
+
+                const nextLink = document.querySelector(`.nav-link[data-page="${currentPageNum + 1}"]`);
+
+                if (nextLink) nextLink.click();
+
+            } else if (e.key === 'ArrowLeft' && currentPageNum > 1) {
+
+                const prevLink = document.querySelector(`.nav-link[data-page="${currentPageNum - 1}"]`);
+
+                if (prevLink) prevLink.click();
+
+            }
+
+        });
+
+
+
+        console.log('%c💖 Valentine\'s Day Website Loaded Successfully! 💖', 'color: #FF6B9D; font-size: 20px; font-weight: bold;');
+
+        console.log('%cAll text is editable - just click and type!', 'color: #FF1744; font-size: 14px;');
+
+    </script>
+
+</body>
+
+</html>
